@@ -9,13 +9,17 @@ public class ClassMembersDefault {
 		System.out.println("Default value of Class member variable intVal is " + intVal);
 		System.out.println("Default value of Class member  variable is " + doubleVal);
 		
-		// can't do this from this static method, no object reference
-	    // printDefaultValues();
-		//create instance of class ClassMembersDefault
+		/* We cannot call this printDefaultValues() directly from the static main method 
+		as there is no object reference created yet. */
+	      //printDefaultValues();
+		
+		//Hence, create an instance/object (using 'new' keyword) of main class ClassMembersDefault 
 		ClassMembersDefault objCMD=new ClassMembersDefault();
 		
-		//call the non-static method using created instance -objCMD
+		//Now, call the non-static method using created instance # objCMD
 		objCMD.printDefaultValues();
+		
+		// Efficient way of creating & calling the non-static method using ClassName().Non-StaticMethod name
 		
 		new ClassMembersDefault().printDefaultValues();
 
