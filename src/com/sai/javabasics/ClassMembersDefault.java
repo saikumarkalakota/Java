@@ -45,6 +45,9 @@ public class ClassMembersDefault {
 		System.out.println("Default value of intVal is " + doubleVal);
 		intVal++;
 		System.out.println("Post increment the value of Class variable intVal is " + intVal);	
+		
+		new Student().fetchStudentDetails();
+		
 	}
 	
 
