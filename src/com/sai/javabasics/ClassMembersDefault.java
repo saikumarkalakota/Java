@@ -3,6 +3,7 @@ package com.sai.javabasics;
 public class ClassMembersDefault {
 	  static int intVal;
 	  static double doubleVal;
+	  Student student;
 	  
 
 	public static void main(String[] args) {		
@@ -27,6 +28,7 @@ public class ClassMembersDefault {
 		//or call define another static method & call using Class name ClassMembersDefault
 		ClassMembersDefault.printDefaultValuesStatic();
 		
+		
 	}
 
 	public void printDefaultValues() {
@@ -38,9 +40,12 @@ public class ClassMembersDefault {
 		System.out.println("Post decrement value of intVal is " + intVal);	
 		System.out.println("Value of local variable intInstanceVar is " 
 				+ intInstanceVar);
+		
+		logStudentDetails();
+		
 	}
 	
-	public static void printDefaultValuesStatic() {
+	private static void printDefaultValuesStatic() {
 		System.out.println("Value of Class variable intVal called from main method using static method of is " + intVal);
 		System.out.println("Default value of intVal is " + doubleVal);
 		intVal++;
@@ -48,8 +53,14 @@ public class ClassMembersDefault {
 		
 		new Student().fetchStudentDetails();
 		
+		
 	}
 	
-
+	private void logStudentDetails() {
+		
+		student=new Student();
+		student.getStudentDetails();
+		
+	}
 	
 }
